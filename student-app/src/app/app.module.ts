@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { EditComponent } from './components/edit/edit.component';
 import { CreateComponent } from './components/create/create.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 import { ListService } from './list.service';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'create', component:CreateComponent},
   { path: 'edit/:id', component:EditComponent},
   { path: 'list', component:ListComponent},
+  { path: 'detail/:id', component:DetailComponent},
   { path: '', redirectTo: '/list', pathMatch: 'full' }
   
 ];
@@ -27,7 +29,8 @@ const routes: Routes = [
     ListComponent,
     EditComponent,
     CreateComponent,
-    TopBarComponent
+    TopBarComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

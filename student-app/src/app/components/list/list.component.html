@@ -1,5 +1,7 @@
+<div>
 <p>list works!</p>
 <ul>
-<li *ngFor="let list of lists">{{list.title}}</li>
+<li *ngFor="let list of lists"><a routerLink="/detail/{{list._id}}">{{list.title}}</a></li>
 </ul>
 <button routerLink="/create">Create New Record</button>
+</div>

@@ -1,6 +1,6 @@
 export interface List {
     
-    id: String;
+    _id: number;
     title: String;
     rollno: String;
 }
