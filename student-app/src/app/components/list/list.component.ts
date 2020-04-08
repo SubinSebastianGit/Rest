@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { List } from '../../list.model';
 import { ListService } from '../../list.service';
 
 @Component({
@@ -8,13 +11,23 @@ import { ListService } from '../../list.service';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private listservice: ListService) { }
+  lists: List[];
+
+  constructor(private listservice: ListService, private router: Router) { }
 
   ngOnInit(): void {
-    this.listservice.getLists().subscribe((lists) => {
-      console.log(lists);
+    this.fetchLists();
+
+  }
+
+  fetchLists() {
+    this.listservice.getLists().subscribe((data: List[]) => {
+      this.lists = data;
+      console.log('Data Requested...');
+      console.log(this.lists);
     });
 
   }
+  
 
 }

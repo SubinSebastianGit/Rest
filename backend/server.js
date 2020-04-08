@@ -1,14 +1,16 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import List from './models/lists'
+
+var express = require('express');
+var cors = require('cors');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var List = require('./models/lists');
 
 const app = express();
 const router = express.Router();
 
 app.use(cors());
 app.use(bodyParser.json());
+
 
 mongoose.connect('mongodb://localhost:27017/data');
 
