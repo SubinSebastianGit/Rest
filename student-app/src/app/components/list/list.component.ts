@@ -17,7 +17,6 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchLists();
-
   }
 
   fetchLists() {
@@ -26,8 +25,6 @@ export class ListComponent implements OnInit {
       console.log('Data Requested...');
       console.log(this.lists);
     });
-
-  }
-  
+  } 
 
 }

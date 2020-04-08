@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -15,7 +16,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 const routes: Routes = [
   { path: 'create', component:CreateComponent},
   { path: 'edit/:id', component:EditComponent},
-  { path: 'list', component:ListComponent}
+  { path: 'list', component:ListComponent},
+  { path: '', redirectTo: '/list', pathMatch: 'full' }
   
 ];
 
@@ -30,6 +32,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
