@@ -27,4 +27,12 @@ export class ListComponent implements OnInit {
     });
   } 
 
+  deleteList(id) {
+    if(confirm('Delete data'))
+      this.listservice.deletelist(id).subscribe(() => {
+        console.log('Data removed...');
+      });
+    this.fetchLists();
+  } 
+
 }

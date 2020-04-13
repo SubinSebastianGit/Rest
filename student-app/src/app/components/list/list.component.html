@@ -3,7 +3,8 @@
 <ul>
 <li *ngFor="let list of lists">
 <a routerLink="/detail/{{list._id}}">{{list.title}}</a>
-<button #edit routerLink="/edit/{{list._id}}">Edit</button>
+<button class="edit" routerLink="/edit/{{list._id}}">Edit</button>
+<button class="delete" (click)="deleteList(list._id)">Delete</button>
 </li>
 </ul>
 <button routerLink="/create">Create New Record</button>

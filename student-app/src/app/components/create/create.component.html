@@ -1,8 +1,14 @@
 <div>
 <p>create works!</p>
-<textarea rows="1" [(ngModel)]="enteredTitle"></textarea><br><br>
-<textarea rows="1" [(ngModel)]="enteredrollno"></textarea><br><br>
-<button (click)="onAddData()">Create</button>
+<form>
+<label>Title:<br><br> 
+<input [(ngModel)]="enteredTitle" name="title"/><br><br>
+</label>
+<label>Rollno:<br><br> 
+<input [(ngModel)]="enteredrollno" name="rollno"/><br><br>
+</label>
+<button (click)="onAddData()" routerLink="/list">Create</button>
+</form>
 <p>{{title}}</p>
 <p>{{rollno}}</p>
 </div>

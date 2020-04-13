@@ -27,7 +27,8 @@ export class CreateComponent implements OnInit {
   onAddData() {
   this.title = this.enteredTitle;
   this.rollno = this.enteredrollno;
-  this.addList();
+  if(confirm("New data about to be added"))
+    this.addList();
   }
 
 }
